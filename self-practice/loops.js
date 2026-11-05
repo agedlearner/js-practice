@@ -273,8 +273,89 @@ Number Analyzer: Take one number n and print:
 2. its digit sum, its reverse and whether it's a palindrome
 3. its factorial(only if n is 12 or less)
 4. the fibonacci series up to n
+
+
+
+let n = 11;
+
+console.log("Your number is:", n);
+
+// 1. Check whether number is prime
+let isPrime = true;
+
+if (n <= 1) {
+    isPrime = false;
+}
+
+for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+        isPrime = false;
+        break;
+    }
+}
+
+if (isPrime) {
+    console.log(n, "is a prime number");
+} else {
+    console.log(n, "is not a prime number");
+}
+
+
+// 2. Digit sum, reverse and palindrome
+let num = n;
+let sum = 0;
+let rev = 0;
+let original = n;
+
+while (num > 0) {
+    let digit = num % 10;
+
+    sum = sum + digit;
+    rev = rev * 10 + digit;
+
+    num = Math.floor(num / 10);
+}
+
+console.log("Digit sum:", sum);
+console.log("Reverse:", rev);
+
+if (rev === original) {
+    console.log("It is a palindrome");
+} else {
+    console.log("It is not a palindrome");
+}
+
+
+// 3. Factorial (only if n <= 12)
+let fact = 1;
+
+if (n >= 0 && n <= 12) {
+    for (let i = n; i > 0; i--) {
+        fact = fact * i;
+    }
+
+    console.log("Factorial:", fact);
+} else {
+    console.log("Factorial is allowed only from 0 to 12");
+}
+
+
+// 4. Fibonacci series up to n
+let a = 0;
+let b = 1;
+
+console.log("Fibonacci series:");
+
+while (a <= n) {
+    console.log(a);
+
+    let c = a + b;
+    a = b;
+    b = c;
+}
 */
 
+//Next topic is functions so the above code is rewritten using functions, go through it if you want to.
 function numberAnalyzer(n) {
   console.log(`Your number is ${n}`);
 
