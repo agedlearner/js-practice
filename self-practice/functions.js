@@ -56,7 +56,6 @@ function isEven(n) {
 console.log(isEven(10));
 */
 
-
 /* 
 4. maxOfThree(a, b, c)
 
@@ -86,5 +85,54 @@ console.log(cTf(20))
 
 /* 
 6. Write square as a declaration, as an expression,and as an arrow function. Call all three.
+
+function square(num){
+    return num * num;
+}
+
+const squareExpression = function(num){
+    return num * num;
+};
+const squareArrow =  (num)=>{
+    return num * num;
+}
+
+console.log(square(5));
+console.log(squareExpression(5));
+console.log(squareArrow(5));
 */
 
+/* 
+7. Convert your add, isEven and cTf into arrow functions with implicit return(no {} and no return keyword).
+
+const add = (a, b) => a + b;
+const isEven = (n) => n % 2 === 0;
+const cTf = (deg) => deg * 1.8 + 32;
+
+console.log(add(5, 4));
+console.log(isEven(2));
+console.log(cTf(20));
+*/
+
+
+//Parameters
+
+/* 
+8. power(base, exp = 2). Call it with one and with two arguments.
+*/
+
+function power(base, exp = 2){
+    return base * base;
+}
+console.log(power(8))
+
+function powerTwo(base, exp){
+    let i = 1;
+    let result = 1;
+    while(i <= exp){
+    result *= base;
+    i++
+    }
+    return result;
+}
+console.log(powerTwo(8, 2))
