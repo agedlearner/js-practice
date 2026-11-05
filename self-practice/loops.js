@@ -255,7 +255,7 @@ console.log("*****");
 12
 123
 1234
-*/
+
 
 for (let i = 1; i <= 5; i++) {
   let row = "";
@@ -264,3 +264,90 @@ for (let i = 1; i <= 5; i++) {
   }
   console.log(row);
 }
+*/
+
+/* 
+Mini build:
+Number Analyzer: Take one number n and print:
+1. whether it is prime
+2. its digit sum, its reverse and whether it's a palindrome
+3. its factorial(only if n is 12 or less)
+4. the fibonacci series up to n
+*/
+
+function numberAnalyzer(n) {
+  console.log(`Your number is ${n}`);
+
+  function prime(p) {
+    //whether it is prime
+    let isPrime = true;
+    if (p <= 1) {
+      isPrime = false;
+    }
+    for (let i = 2; i < p; i++) {
+      if (p % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      console.log(`${p} is a prime number.`);
+    } else {
+      console.log(`${p} is not a prime number.`);
+    }
+  }
+
+  function drp(num) {
+    //its digit sum, its reverse and whether it's a palindrome: 121
+    let sum = 0;
+    let rev = 0;
+    let og = num;
+    while (num > 0) {
+      let a = num % 10;
+      rev = rev * 10 + a;
+      sum += a;
+      num = Math.floor(num / 10);
+    }
+    console.log(`Digit sum: ${sum}`);
+    console.log(`It's Reverse: ${rev}`);
+    if (rev === og) {
+      console.log("It is a Palindrome");
+    } else {
+      console.log("Not a palindrome");
+    }
+  }
+
+  function factorial(fact) {
+    //its factorial(only if n is 12 or less)
+    let s = 1;
+    if (fact >= 0 && fact <= 12) {
+      for (let i = fact; i > 0; i--) {
+        s = s * i;
+      }
+      console.log(`Factorial: ${s}`);
+    } else {
+      console.log("Enter a number between 0-12 for factorial");
+    }
+  }
+
+  function fibonacci(fibo) {
+    //the fibonacci series up to n
+    let a = 0;
+    let b = 1;
+    console.log("Fibonacci:");
+
+    for (let i = 1; i <= fibo; i++) {
+      console.log(a)
+
+      let c = a + b;
+      a = b;
+      b = c;
+    }
+  }
+
+  prime(n);
+  drp(n);
+  factorial(n);
+  fibonacci(n);
+}
+numberAnalyzer(11);
