@@ -114,12 +114,10 @@ console.log(isEven(2));
 console.log(cTf(20));
 */
 
-
 //Parameters
 
 /* 
 8. power(base, exp = 2). Call it with one and with two arguments.
-*/
 
 function power(base, exp = 2){
     return base * base;
@@ -136,3 +134,28 @@ function powerTwo(base, exp){
     return result;
 }
 console.log(powerTwo(8, 2))
+*/
+
+/* 
+9. sum(...nums) returns the sum of any number of arguments. Then write average(...nums) and handle the empty case.
+
+
+function sum(...nums) {
+  let total = 0;
+  for (let i = 0; i < nums.length; i++) {
+    total += nums[i];
+  }
+  return total;
+}
+
+function average(...nums) {
+  if (nums.length === 0) {
+    return 0;
+  }
+  return sum(...nums) / nums.length;
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+console.log(average(1, 2, 3, 4, 5));
+*/
+
