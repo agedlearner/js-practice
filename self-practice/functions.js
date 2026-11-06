@@ -159,3 +159,15 @@ console.log(sum(1, 2, 3, 4, 5));
 console.log(average(1, 2, 3, 4, 5));
 */
 
+/*
+10: Find the minimum and maximum
+Write two functions using the rest parameter (...nums):
+1. findMax(...nums) → Returns the largest number.
+2. findMin(...nums) → Returns the smallest number. 
+*/
+
+console.log(findMax(10, 25, 5, 40, 15));
+
+console.log(findMin(10, 25, 5, 40, 15));
+
+console.log(findMax());
