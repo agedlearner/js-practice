@@ -201,29 +201,25 @@ function factorial(n) {
     for (let i = n; i > 0; i--) {
       s = s * i;
     }
-    console.log(`Factorial: ${s}`);
+    return s;
   } else {
-    console.log("Enter a number between 0-12 for factorial");
+    return "Enter a number between 0-12 for factorial";
   }
 }
 
 function isPrime(p) {
   //whether it is prime
-  let isPrime = true;
+  let prime = true;
   if (p <= 1) {
-    isPrime = false;
+    prime = false;
   }
   for (let i = 2; i < p; i++) {
     if (p % i === 0) {
-      isPrime = false;
+      prime = false;
       break;
     }
   }
-  if (isPrime) {
-    console.log(`${p} is a prime number.`);
-  } else {
-    console.log(`${p} is not a prime number.`);
-  }
+  return prime;
 }
 
 function reverseNumberNisPalindrome(num) {
@@ -235,31 +231,50 @@ function reverseNumberNisPalindrome(num) {
     rev = rev * 10 + a;
     num = Math.floor(num / 10);
   }
-  console.log(`${rev}`);
-  if (rev === og) {
-    console.log("It is a Palindrome");
-  } else {
-    console.log("Not a palindrome");
-  }
+  return {
+    reverse: rev,
+    isPalindrome: rev === og,
+  };
 }
 
 function fibonacci(fibo) {
   //the fibonacci series up to n
   let a = 0;
   let b = 1;
-  console.log("Fibonacci:");
+  let arr = [];
 
   for (let i = 1; i <= fibo; i++) {
-    console.log(a);
+    arr.push(a);
 
     let c = a + b;
     a = b;
     b = c;
   }
+  return arr;
 }
 
-factorial(5);
-isPrime(11);
-reverseNumberNisPalindrome(121);
-fibonacci(7);
+console.log(factorial(5));
+console.log(isPrime(11));
+console.log(reverseNumberNisPalindrome(121));
+console.log(fibonacci(7));
 */
+
+
+/* 
+13. printPrimes(limit) that calls your isPrime. This is one function calling other. isPrime is a function in exercise 12.
+
+
+function printPrimes(limit) {
+  for (let n = 2; n <= limit; n++) {
+    if (isPrime(n)) {
+      console.log(n);
+    }
+  }
+}
+printPrimes(30);
+*/
+
+/* 
+14. countVolumes(str) and capitalize(word)
+*/
+
