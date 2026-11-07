@@ -164,10 +164,102 @@ console.log(average(1, 2, 3, 4, 5));
 Write two functions using the rest parameter (...nums):
 1. findMax(...nums) → Returns the largest number.
 2. findMin(...nums) → Returns the smallest number. 
-*/
+
 
 console.log(findMax(10, 25, 5, 40, 15));
 
 console.log(findMin(10, 25, 5, 40, 15));
 
 console.log(findMax());
+*/
+
+/* 
+11. Write a function that returns an object {sum, product} for two numbers, then print both.
+
+function calculate(a, b){
+  return {
+    sum: a + b,
+    product: a * b,
+  };
+}
+
+const result = calculate(3, 4)
+console.log(result.sum);
+console.log(result.product);
+*/
+
+// Refer to loops.js: ./loops.js
+
+/* 
+12. Turn these into functions: factorial(n), isPrime(p), reverseNumberNisPalindrome(num), fibonacci(n) (returns an array) 
+
+
+function factorial(n) {
+  //its factorial(only if n is 12 or less)
+  let s = 1;
+  if (n >= 0 && n <= 12) {
+    for (let i = n; i > 0; i--) {
+      s = s * i;
+    }
+    console.log(`Factorial: ${s}`);
+  } else {
+    console.log("Enter a number between 0-12 for factorial");
+  }
+}
+
+function isPrime(p) {
+  //whether it is prime
+  let isPrime = true;
+  if (p <= 1) {
+    isPrime = false;
+  }
+  for (let i = 2; i < p; i++) {
+    if (p % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log(`${p} is a prime number.`);
+  } else {
+    console.log(`${p} is not a prime number.`);
+  }
+}
+
+function reverseNumberNisPalindrome(num) {
+  //reverse and whether it's a palindrome:
+  let rev = 0;
+  let og = num;
+  while (num > 0) {
+    let a = num % 10;
+    rev = rev * 10 + a;
+    num = Math.floor(num / 10);
+  }
+  console.log(`${rev}`);
+  if (rev === og) {
+    console.log("It is a Palindrome");
+  } else {
+    console.log("Not a palindrome");
+  }
+}
+
+function fibonacci(fibo) {
+  //the fibonacci series up to n
+  let a = 0;
+  let b = 1;
+  console.log("Fibonacci:");
+
+  for (let i = 1; i <= fibo; i++) {
+    console.log(a);
+
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+}
+
+factorial(5);
+isPrime(11);
+reverseNumberNisPalindrome(121);
+fibonacci(7);
+*/
