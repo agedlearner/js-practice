@@ -275,6 +275,41 @@ printPrimes(30);
 */
 
 /* 
-14. countVolumes(str) and capitalize(word)
+14. countVowels(str) and capitalize(word) (hint: .toUpperCase() and .slice())
 */
+function countVowels(str) {
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    let letter = str[i].toLowerCase();
+
+    if (
+      letter === "a" ||
+      letter === "e" ||
+      letter === "i" ||
+      letter === "o" ||
+      letter === "u"
+    ) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+function capitalize(word) {
+  if (word.length === 0) {
+    return word;
+  }
+
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+console.log(countVowels("JavaScript"));
+console.log(capitalize("hello"));
+
+
+
+
+
 
