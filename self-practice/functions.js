@@ -259,7 +259,6 @@ console.log(reverseNumberNisPalindrome(121));
 console.log(fibonacci(7));
 */
 
-
 /* 
 13. printPrimes(limit) that calls your isPrime. This is one function calling other. isPrime is a function in exercise 12.
 
@@ -274,9 +273,8 @@ function printPrimes(limit) {
 printPrimes(30);
 */
 
-/* 
-14. countVowels(str) and capitalize(word) (hint: .toUpperCase() and .slice())
-*/
+/*14. countVowels(str) and capitalize(word) (hint: .toUpperCase() and .slice())
+
 function countVowels(str) {
   let count = 0;
 
@@ -307,9 +305,72 @@ function capitalize(word) {
 
 console.log(countVowels("JavaScript"));
 console.log(capitalize("hello"));
+*/
+
+/* 15. getGrade(marks) returns A,B,C or Fail. Then loop over an array of marks and print each grade.
 
 
+function getGrade(marks) {
+  if (marks >= 90) {
+    return "A";
+  } else if (marks >= 70 && marks < 90) {
+    return "B";
+  } else if (marks >= 50 && marks < 70) {
+    return "C";
+  } else if (marks < 50) {
+    return "Fail";
+  }
+}
 
+const marks = [57, 82, 95, 43];
 
+for (let i = 0; i < marks.length; i++) {
+  console.log(getGrade(marks[i]));
+}
+ */
 
+/* 16. Write a snippet where a var declared inside an if block is visible outside it, and a let isn't. Explain why in comment.
 
+if (true) {
+  var varExample = "I can be used outside the if block";
+  let letExample = "I can only be used inside the if block";
+}
+
+console.log(varExample); // Works
+
+// console.log(letExample); // This would cause a ReferenceError
+// var is function-scoped, but let is block-scoped.
+*/
+
+/* 17. Write a counter that uses a global variable, then rewrite it so the variable lives inside the function. Say which is safer. 
+ */
+
+//Global Variable
+/* let count = 0;
+function globalCounter(){
+  count ++;
+  return count;
+}
+
+console.log(globalCounter());
+console.log(globalCounter());
+console.log(globalCounter());
+console.log(globalCounter());
+console.log(globalCounter()); */
+
+//Function variable
+/* function functionVariable(){
+  let count = 0;
+
+  return function(){
+    count++;
+    return count;
+  }
+}
+
+const counter = functionVariable()
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter()); */
