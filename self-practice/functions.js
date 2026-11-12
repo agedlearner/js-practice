@@ -511,5 +511,100 @@ Output:
 2
 3
 4
-5 */
+5 
 
+function printNumbers(n) {
+  if (n === 0) {
+    return;
+  }
+  printNumbers(n - 1);
+  console.log(n);
+}
+
+(printNumbers(5));
+*/
+
+/* 25. Print numbers from n to 1
+
+Write a recursive function countDown(n).
+Example:
+countDown(5);
+
+Output:
+5
+4
+3
+2
+1 
+
+function countDown(n) {
+  if (n === 0) {
+    return;
+  }
+  console.log(n);
+  countDown(n - 1);
+}
+countDown(5);
+*/
+
+/* 26. Power of a number
+
+Write a recursive function power(base, exponent).
+
+Example:
+power(2, 3); // 8
+power(5, 2); // 25
+
+
+Don't use Math.pow() or **. 
+
+function power(base, exponent) {
+  if (exponent === 0) {
+    return 1;
+  }
+  
+  return base * power(base, (exponent - 1))
+}
+
+console.log(power(2, 3));
+*/
+
+/* 27. Count digits using recursion
+
+Write a recursive function countDigits(n).
+
+Example:
+countDigits(12345); // 5
+countDigits(789);   // 3
+
+
+Don't use loops or convert the number into a string. 
+function countDigits(n){
+  if (n <= 9){
+    return 1;
+  }
+
+  return 1 + countDigits(Math.floor(n / 10))
+
+}
+console.log(countDigits(12345));
+*/
+
+/* 28. Fibonacci using recursion
+
+Write a recursive function fibonacci(n) that returns the nth Fibonacci number.
+
+Example:
+fibonacci(0); // 0
+fibonacci(1); // 1
+fibonacci(6); // 8 
+
+function fibonacci(n){
+  if (n === 0 || n === 1){
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci (n - 2);
+
+}
+console.log(fibonacci(6));
+*/
