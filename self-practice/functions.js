@@ -374,3 +374,35 @@ console.log(counter());
 console.log(counter());
 console.log(counter());
 console.log(counter()); */
+
+// Functions as values (React depends on this)
+/* 18. calculate(a, b, operation) where operation is a function you pass in: calculate(4, 2, (x, y) => x + y). Call it with add, subtract, multiply and divide. 
+
+function calculate(a, b, operation) {
+  return operation(a, b);
+}
+
+console.log(calculate(4, 2, (x, y) => x + y));
+console.log(calculate(4, 2, (x, y) => x - y));
+console.log(calculate(4, 2, (x, y) => x * y));
+console.log(calculate(4, 2, (x, y) => x / y));
+*/
+
+/* 19. Recursion: write factorial and sumTo(n) recursively, with no loops. 
+function factorial(n){
+  if(n === 0 || n === 1){
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+function sumTo(n){
+  if(n === 0){
+    return 0;
+  }
+  return n + sumTo(n - 1);
+}
+
+console.log(factorial(5));
+console.log(sumTo(5));
+*/
