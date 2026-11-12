@@ -342,7 +342,7 @@ console.log(varExample); // Works
 // var is function-scoped, but let is block-scoped.
 */
 
-/* 17. Write a counter that uses a global variable, then rewrite it so the variable lives inside the function. Say which is safer. 
+/* 17. Write a counter that uses a global variable, then rewrite it so the variable lives inside the function. Say which is safer.
  */
 
 //Global Variable
@@ -406,3 +406,110 @@ function sumTo(n){
 console.log(factorial(5));
 console.log(sumTo(5));
 */
+
+/* 20. Calculator using callbacks
+
+Write a function calculate(a, b, operation) that accepts a callback.
+
+Call it using:
+- Addition
+- Subtraction
+- Multiplication
+- Division
+Same concept as Question 18, but try writing named callback functions instead of arrow functions. 
+
+function calculate(a, b, operation) {
+  return operation(a, b);
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+console.log(calculate(4, 2, add));
+console.log(calculate(4, 2, subtract));
+console.log(calculate(4, 2, multiply));
+console.log(calculate(4, 2, divide));
+*/
+
+/* 21. Apply operation
+
+Write a function applyOperation(num, operation) that takes a number and a function.
+
+Example:
+applyOperation(5, n => n * n); // 25
+applyOperation(5, n => n * 2); // 10 
+
+function applyOperation(num, operation){
+  return operation(num)
+}
+
+console.log(applyOperation(5, n => n * n));
+console.log(applyOperation(5, n => n * 2));
+*/
+
+/* 22. Custom array processor
+
+Write a function processArray(arr, callback) that applies a callback to every element and returns a new array.
+
+Example:
+processArray([1, 2, 3], n => n * 2);
+// [2, 4, 6] 
+
+function processArray(arr, callback) {
+  return arr.map(callback);
+}
+
+console.log(processArray([1, 2, 3], (n) => n * 2));
+*/
+
+/* 23. Function returning a function
+
+Write a function multiplyBy(x) that returns another function.
+
+Example:
+const double = multiplyBy(2);
+const triple = multiplyBy(3);
+
+console.log(double(5)); // 10
+console.log(triple(5)); // 15 
+
+function multiplyBy(x) {
+  return function(number){
+    return x * number
+  }
+}
+
+const double = multiplyBy(2);
+const triple = multiplyBy(3);
+
+console.log(double(5)); 
+console.log(triple(5)); 
+*/
+
+/* 24. Print numbers from 1 to n
+
+Write a recursive function printNumbers(n).
+
+Example:
+printNumbers(5);
+
+Output:
+1
+2
+3
+4
+5 */
+
