@@ -687,7 +687,7 @@ Write a recursive function largestDigit(n).
 
 Examples:
 largestDigit(5832); // 8
-largestDigit(741);  // 7 */
+largestDigit(741);  // 7 
 
 function largestDigit(n) {
   if (n < 10) {
@@ -701,3 +701,23 @@ function largestDigit(n) {
 
 console.log(largestDigit(5832));
 console.log(largestDigit(741));
+*/
+
+/* 34. Count how many times a digit appears
+Write a recursive function countOccurrence(n, digit).
+
+Examples:
+countOccurrence(12231, 2); // 2
+countOccurrence(5555, 5);  // 4 */
+
+function countOccurrence(n, digit){
+
+  if (n < 10){
+    return n === digit ? 1: 0 ;
+  }
+  const lastDigit = n % 10;
+  const countLastDigit = lastDigit === digit ? 1 : 0;
+
+  return countLastDigit + countOccurrence(Math.floor(n / 10), digit)
+}
+console.log(countOccurrence(12231, 2));
