@@ -608,3 +608,96 @@ function fibonacci(n){
 }
 console.log(fibonacci(6));
 */
+
+/* 29. Sum of digits using recursion
+Write a recursive function sumDigits(n).
+
+Examples:
+sumDigits(1234); // 10
+sumDigits(567);  // 18 
+
+
+function sumDigits(n){
+  
+  if(n < 10){
+    return n;
+  }
+  return (n % 10) + sumDigits(Math.floor(n / 10))
+}
+
+console.log(sumDigits(1234));
+*/
+
+/* 30. Multiply digits using recursion
+Write a recursive function multiplyDigits(n).
+
+Examples:
+multiplyDigits(123); // 6
+multiplyDigits(234); // 24 
+
+function multiplyDigits(n){
+  if(n < 10){
+    return n
+  }
+  return (n % 10) * multiplyDigits(Math.floor(n / 10))
+}
+
+console.log(multiplyDigits(1234));
+*/
+
+/* 31. Reverse a number using recursion
+Write a recursive function reverseNumber(n).
+
+Examples:
+reverseNumber(1234); // 4321
+reverseNumber(567);  // 765 
+
+function reverseNumber(n, reversed = 0) {
+  if (n === 0) {
+    return reversed;
+  }
+  return reverseNumber(Math.floor(n / 10), reversed * 10 + (n % 10));
+}
+console.log(reverseNumber(1234));
+*/
+
+/* 32. Check palindrome using recursion
+Write a recursive function isPalindrome(n).
+
+Examples:
+isPalindrome(121);  // true
+isPalindrome(123);  // false
+isPalindrome(1221); // true 
+
+function isPalindrome(n, og = n, reversed = 0){
+  if(n === 0){
+    return reversed === og;
+  }
+  return isPalindrome(
+   Math.floor(n / 10),
+   og,
+   reversed * 10 +  (n % 10)
+  )
+}
+console.log(isPalindrome(121));
+*/
+
+/* 33. Find the largest digit using recursion
+Write a recursive function largestDigit(n).
+
+Examples:
+largestDigit(5832); // 8
+largestDigit(741);  // 7 */
+
+function largestDigit(n) {
+  if (n < 10) {
+    return n;
+  }
+  const lastDigit = n % 10
+  const largestOfRest = largestDigit(Math.floor(n / 10))
+
+  return Math.max(lastDigit, largestOfRest)
+}
+
+console.log(largestDigit(5832));
+console.log(largestDigit(741));
