@@ -708,7 +708,7 @@ Write a recursive function countOccurrence(n, digit).
 
 Examples:
 countOccurrence(12231, 2); // 2
-countOccurrence(5555, 5);  // 4 */
+countOccurrence(5555, 5);  // 4 
 
 function countOccurrence(n, digit){
 
@@ -721,3 +721,5 @@ function countOccurrence(n, digit){
   return countLastDigit + countOccurrence(Math.floor(n / 10), digit)
 }
 console.log(countOccurrence(12231, 2));
+*/
+
