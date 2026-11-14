@@ -6,3 +6,20 @@ function check(name, actual, expected) {
 }
 Call check at least twice per function, including one edge case each (zero, an empty string, a negative number).*/
 
+function isEven(){
+
+
+}
+
+function isPrime(){}
+function factorial(){}
+function reverseString(){}
+function capitalize(){}
+function sum(...nums){}
+function average(...nums){}
+function calculate(a, b, op){}
+
+
+function check(name, actual, expected) {
+  console.log(actual === expected ? "PASS" : "FAIL", name);
+}
